@@ -16,11 +16,10 @@ div{
 }
 
 #smove #score{
-  position: absolute;
+  position: relative;
   top: 0;
   width: 200px;
   left: calc(50% - 100px);
-  display: inline-block;
 }
 
 #smove #score .bestscore{
@@ -37,13 +36,12 @@ div{
 
 #smove #center{
   position: relative;
-  overflow: hidden;
-  margin: 0 auto;
+  margin: auto auto;
   height: 600px;
   width: 600px;
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-height: 690px) {
   #smove #score{
     display: none;
   }
