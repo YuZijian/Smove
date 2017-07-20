@@ -1,8 +1,7 @@
 function init() {
   DrawAll();
   DrawBeginParam();
-  document.querySelector(".bestscore").innerHTML = "Best: 0";
-  document.querySelector(".currentscore").innerHTML = "0";
+  DrawScore();
 }
 
 function ClearCenter() {
@@ -114,5 +113,25 @@ function ClearParam() {
     var pa = document.querySelector("#param");
     var patx = pa.getContext("2d");
     patx.clearRect(0, 0, 360, 360);
+  }
+}
+
+function DrawScore() {
+  var sa = document.querySelector("#score");
+  var satx = sa.getContext("2d");
+  satx.globalAlpha = 1;
+  satx.fillStyle = "white";
+  satx.textAlign = "center";
+  satx.font = "30px Verdana";
+  satx.fillText("Best: " + gameManager.best, 100, 30);
+  satx.font = "75px Verdana";
+  satx.fillText(gameManager.score, 100, 110);
+}
+
+function ClearScore() {
+  if (!gameManager.isPaused) {
+    var sa = document.querySelector("#score");
+    var satx = sa.getContext("2d");
+    satx.clearRect(0, 0, 200, 180);
   }
 }

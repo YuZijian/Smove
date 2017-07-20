@@ -291,13 +291,10 @@ function smoveManager() {
       this.isPaused = false;
       this.bbsead = rand(0, 3);
       this.maxCount = 200;
-      document.querySelector(".currentscore").innerHTML = String(this.score);
-      document.querySelector(".bestscore").innerHTML = "Best: " + String(this.best);
     },
 
     addScore: function() {
       this.score++;
-      document.querySelector(".currentscore").innerHTML = String(this.score);
     },
 
     addLevel: function() {
@@ -328,7 +325,6 @@ function smoveManager() {
       if (this.best < this.score) {
         this.best = this.score;
       }
-      document.querySelector(".bestscore").innerHTML = "Best: " + String(this.best);
     },
 
     endgame: function() {

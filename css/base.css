@@ -15,34 +15,9 @@ div{
   display: block;
 }
 
-#smove #score{
-  position: relative;
-  top: 0;
-  width: 200px;
-  left: calc(50% - 100px);
-}
-
-#smove #score .bestscore{
-  font-size: 20px;
-  color: white;
-  display: block;
-}
-
-#smove #score .currentscore{
-  font-size: 50px;
-  color: white;
-  display: block;
-}
-
 #smove #center{
   position: relative;
   margin: auto auto;
   height: 600px;
   width: 600px;
-}
-
-@media all and (max-height: 690px) {
-  #smove #score{
-    display: none;
-  }
 }

@@ -5,18 +5,12 @@
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <link rel="stylesheet" type="text/css" href="css/gamearea.css">
   <link rel="icon" type="image/x-icon" href="media/icon.jpg">
-  <script type="text/javascript" src="scripts/smove.js"></script>
-  <script type="text/javascript" src="scripts/logic.js"></script>
-  <script type="text/javascript" src="scripts/class.js"></script>
 </head>
 
 <body id="smove" onload="init()">
-  <div id="score">
-    <span class="bestscore"></span>
-    <span class="currentscore"></span>
-  </div>
   <div id="center">
     <canvas id="ground" width="600" height="600"></canvas>
+    <canvas id="score" width="200" height="180"></canvas>
     <canvas id="smallrec" width="34" height="34"></canvas>
     <canvas id="whiteb" width="240" height="240"></canvas>
     <canvas id="blackb" width="600" height="600"></canvas>
@@ -24,3 +18,8 @@
   </div>
 </body>
 </html>
+
+<script type="text/javascript" src="scripts/smove.js"></script>
+<script type="text/javascript" src="scripts/logic.js"></script>
+<script type="text/javascript" src="scripts/class.js"></script>
+<script type="text/javascript" src="scripts/control.js"></script>

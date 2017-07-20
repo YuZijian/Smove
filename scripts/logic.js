@@ -1,32 +1,3 @@
-document.onkeydown = function(event) {
-  var e =  event || window.event || arguments.callee.caller.arguments[0];
-  if (e && e.keyCode) {
-    if (gameManager.Status() == 0){
-      gameManager.startgame();
-      if(e.keyCode >= 37 && e.keyCode <= 40)
-        mBall.Move(e.keyCode % 37);
-      GameBegin();
-    }
-    else if (gameManager.Status() == 1) {
-      if(gameManager.isPaused == false && e.keyCode >= 37 && e.keyCode <= 40)
-        mBall.Move(e.keyCode % 37); //37->left->Move(0)
-      else if (e.keyCode == 32) {
-        if(gameManager.isPaused)
-          GameContinue();
-        else
-          GamePause();
-      }
-    }
-    else if (gameManager.Status() == 2) {
-      if (e.keyCode == 13) {  //Enter
-        ClearData();
-        gameManager.startgame();
-        GameBegin();
-      }
-    }
-  }
-}
-
 //main timer of this game
 var m_timer;
 var bbcount = 0; //control blackball
@@ -65,7 +36,8 @@ function Smove() {
     smallRect.Clear();
     smallRect.isvalid = false;
     gameManager.addScore();
-
+    ClearScore();
+    DrawScore();
     let delay_time = 500;
     if (gameManager.score % 10 == 9)
       smallRect.color = "rgb(255, 229, 51)";

@@ -35,7 +35,10 @@ var h = document.documentElement.clientHeight;
 mybody.style.height = h + 'px';
 
 mybody.addEventListener('touchstart', function(e) {
-    //e.preventDefault();
+    if (e.cancelable) {
+      if (!e.defaultPrevented)
+        e.preventDefault();
+    }
     if (gameManager.Status() == 0) {
       gameManager.startgame();
       GameBegin();
