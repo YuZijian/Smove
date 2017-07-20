@@ -18,9 +18,11 @@ document.onkeydown = function(event) {
       }
     }
     else if (gameManager.Status() == 2) {
-      ClearData();
-      gameManager.startgame();
-      GameBegin();
+      if (e.keyCode == 13) {  //Enter
+        ClearData();
+        gameManager.startgame();
+        GameBegin();
+      }
     }
   }
 }
@@ -46,7 +48,7 @@ function GameBegin() {
 
 function Smove() {
   //judge if crash
-  let maxdis = 42; //smaller than sum of 2 radius
+  let maxdis = 45; //smaller than sum of 2 radius
   for (let bb of enemy) {
     let dx = mBall.posX - bb.posX + 180;
     let dy = mBall.posY - bb.posY + 180;

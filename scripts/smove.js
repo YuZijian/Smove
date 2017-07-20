@@ -104,9 +104,9 @@ function DrawOverParam() {
   patx.globalAlpha = 1;
   patx.fillText("GAME OVER", 180, 100);
   patx.font = "80px Consolas";
-  patx.fillText(gameManager.score, 180, 200);
+  patx.fillText(gameManager.score, 180, 205);
   patx.font = "25px Consolas";
-  patx.fillText("Press any key to restart", 180, 270);
+  patx.fillText("Press enter to restart", 180, 270);
 }
 
 function ClearParam() {
