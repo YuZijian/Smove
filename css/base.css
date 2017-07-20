@@ -1,0 +1,50 @@
+*{margin: 0; padding: 0; border: 0;}
+
+#smove{
+  background-color: rgb(108, 196, 136);
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+div{
+  display: block;
+}
+
+#smove #score{
+  position: absolute;
+  top: 0;
+  width: 200px;
+  left: calc(50% - 100px);
+  display: inline-block;
+}
+
+#smove #score .bestscore{
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+#smove #score .currentscore{
+  font-size: 50px;
+  color: white;
+  display: block;
+}
+
+#smove #center{
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 600px;
+  width: 600px;
+}
+
+@media all and (max-width: 400px) {
+  #smove #score{
+    display: none;
+  }
+}

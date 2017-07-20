@@ -1,0 +1,34 @@
+#smove #center #ground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#smove #center #smallrec {
+  position: absolute;
+  top: 283px;
+  left: 283px;
+  z-index: 1;
+}
+
+#smove #center #whiteb {
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  z-index: 2;
+}
+
+#smove #center #blackb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+#smove #center #param {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 4;
+}
